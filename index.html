@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>AutoDesign Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="sidebar">
+<h2>AutoDesign Studio</h2>
+
+<label>Tipo</label>
+<select id="carType">
+<option value="sedan">Sedán</option>
+<option value="sport">Deportivo</option>
+<option value="suv">SUV</option>
+</select>
+
+<label>Color</label>
+<input type="color" id="colorPicker" value="#ff0000">
+
+<label>Ruedas</label>
+<input type="range" id="wheelSize" min="30" max="70" value="50">
+
+<label>Altura</label>
+<input type="range" id="heightAdjust" min="-40" max="40" value="0">
+
+<label><input type="checkbox" id="spoiler"> Alerón</label>
+<label><input type="checkbox" id="ledLights"> LED (Premium)</label>
+
+<button onclick="saveProject()">Guardar</button>
+<button onclick="loadProject()">Cargar</button>
+<button onclick="downloadImage()">Exportar</button>
+<button onclick="unlockPremium()">Activar Premium</button>
+
+</div>
+
+<div class="main">
+<canvas id="carCanvas" width="1000" height="600"></canvas>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
